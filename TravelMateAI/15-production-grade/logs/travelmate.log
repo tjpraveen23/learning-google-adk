@@ -1,0 +1,408 @@
+2026-08-02 21:10:50,108 | INFO | database | b0458b43-af50-446a-ab1e-104351dac0d8 | Created Session a9a5d6d9-5000-4723-adfd-87b787d95f41
+2026-08-02 21:10:50,150 | INFO | callbacks | b0458b43-af50-446a-ab1e-104351dac0d8 | Agent started
+2026-08-02 21:10:53,280 | INFO | callbacks | b0458b43-af50-446a-ab1e-104351dac0d8 | Tool started: get_weather | args={'city': 'Chennai'}
+2026-08-02 21:10:53,281 | INFO | cache | b0458b43-af50-446a-ab1e-104351dac0d8 | Cache MISS: weather:chennai
+2026-08-02 21:10:58,299 | INFO | cache | b0458b43-af50-446a-ab1e-104351dac0d8 | Cache STORED : weather:chennai
+2026-08-02 21:10:58,299 | INFO | callbacks | b0458b43-af50-446a-ab1e-104351dac0d8 | Tool completed: get_weather in 5.02 sec
+2026-08-02 21:10:58,299 | INFO | callbacks | b0458b43-af50-446a-ab1e-104351dac0d8 | Cache MISS: get_weather
+2026-08-02 21:10:58,595 | INFO | callbacks | b0458b43-af50-446a-ab1e-104351dac0d8 | Agent completed in 8.45 sec
+2026-08-02 21:10:58,622 | INFO | callbacks | b0458b43-af50-446a-ab1e-104351dac0d8 | Agent started
+2026-08-02 21:10:58,904 | INFO | callbacks | b0458b43-af50-446a-ab1e-104351dac0d8 | Tool started: get_hotel_price_range | args={'city': 'Chennai'}
+2026-08-02 21:10:58,905 | INFO | cache | b0458b43-af50-446a-ab1e-104351dac0d8 | Cache MISS: hotel:chennai
+2026-08-02 21:11:08,921 | INFO | cache | b0458b43-af50-446a-ab1e-104351dac0d8 | Cache STORED : hotel:chennai
+2026-08-02 21:11:08,922 | INFO | callbacks | b0458b43-af50-446a-ab1e-104351dac0d8 | Tool completed: get_hotel_price_range in 10.02 sec
+2026-08-02 21:11:08,922 | INFO | callbacks | b0458b43-af50-446a-ab1e-104351dac0d8 | Cache MISS: get_hotel_price_range
+2026-08-02 21:11:09,314 | INFO | callbacks | b0458b43-af50-446a-ab1e-104351dac0d8 | Agent completed in 10.69 sec
+2026-08-02 21:11:09,340 | INFO | callbacks | b0458b43-af50-446a-ab1e-104351dac0d8 | Agent started
+2026-08-02 21:11:09,676 | INFO | callbacks | b0458b43-af50-446a-ab1e-104351dac0d8 | Tool started: estimate_budget | args={'city': 'Chennai', 'days': 3}
+2026-08-02 21:11:09,678 | INFO | cache | b0458b43-af50-446a-ab1e-104351dac0d8 | Cache MISS: budget:chennai:3
+2026-08-02 21:11:11,699 | INFO | cache | b0458b43-af50-446a-ab1e-104351dac0d8 | Cache STORED : budget:chennai:3
+2026-08-02 21:11:11,699 | INFO | callbacks | b0458b43-af50-446a-ab1e-104351dac0d8 | Tool completed: estimate_budget in 2.02 sec
+2026-08-02 21:11:11,699 | INFO | callbacks | b0458b43-af50-446a-ab1e-104351dac0d8 | Cache MISS: estimate_budget
+2026-08-02 21:11:12,011 | INFO | callbacks | b0458b43-af50-446a-ab1e-104351dac0d8 | Agent completed in 2.67 sec
+2026-08-02 21:11:12,058 | INFO | callbacks | b0458b43-af50-446a-ab1e-104351dac0d8 | Agent started
+2026-08-02 21:11:13,335 | INFO | callbacks | b0458b43-af50-446a-ab1e-104351dac0d8 | Agent completed in 1.28 sec
+2026-08-02 21:12:27,265 | INFO | database | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Created Session d94473b6-913a-4740-a014-8fdb644ea27b
+2026-08-02 21:12:27,307 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Agent started
+2026-08-02 21:12:30,044 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Tool started: get_weather | args={'city': 'Chennai'}
+2026-08-02 21:12:30,045 | INFO | cache | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Cache HIT: weather:chennai
+2026-08-02 21:12:30,045 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Tool completed: get_weather in 0.0 sec
+2026-08-02 21:12:30,045 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Cache HIT: get_weather
+2026-08-02 21:12:30,444 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Agent completed in 3.14 sec
+2026-08-02 21:12:30,476 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Agent started
+2026-08-02 21:12:31,059 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Tool started: get_hotel_price_range | args={'city': 'Chennai'}
+2026-08-02 21:12:31,060 | INFO | cache | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Cache HIT: hotel:chennai
+2026-08-02 21:12:31,060 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Tool completed: get_hotel_price_range in 0.0 sec
+2026-08-02 21:12:31,060 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Cache HIT: get_hotel_price_range
+2026-08-02 21:12:31,363 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Agent completed in 0.89 sec
+2026-08-02 21:12:31,385 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Agent started
+2026-08-02 21:12:31,677 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Tool started: estimate_budget | args={'city': 'Chennai', 'days': 3}
+2026-08-02 21:12:31,678 | INFO | cache | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Cache HIT: budget:chennai:3
+2026-08-02 21:12:31,678 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Tool completed: estimate_budget in 0.0 sec
+2026-08-02 21:12:31,678 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Cache HIT: estimate_budget
+2026-08-02 21:12:31,882 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Tool started: estimate_budget | args={'city': 'Chennai', 'days': 3}
+2026-08-02 21:12:31,883 | INFO | cache | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Cache HIT: budget:chennai:3
+2026-08-02 21:12:31,883 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Tool completed: estimate_budget in 0.0 sec
+2026-08-02 21:12:31,883 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Cache HIT: estimate_budget
+2026-08-02 21:12:32,183 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Tool started: estimate_budget | args={'city': 'Chennai', 'days': 3}
+2026-08-02 21:12:32,184 | INFO | cache | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Cache HIT: budget:chennai:3
+2026-08-02 21:12:32,184 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Tool completed: estimate_budget in 0.0 sec
+2026-08-02 21:12:32,184 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Cache HIT: estimate_budget
+2026-08-02 21:12:32,387 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Tool started: estimate_budget | args={'city': 'Chennai', 'days': 3}
+2026-08-02 21:12:32,387 | INFO | cache | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Cache HIT: budget:chennai:3
+2026-08-02 21:12:32,387 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Tool completed: estimate_budget in 0.0 sec
+2026-08-02 21:12:32,388 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Cache HIT: estimate_budget
+2026-08-02 21:12:32,696 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Tool started: estimate_budget | args={'city': 'Chennai', 'days': 3}
+2026-08-02 21:12:32,697 | INFO | cache | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Cache HIT: budget:chennai:3
+2026-08-02 21:12:32,697 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Tool completed: estimate_budget in 0.0 sec
+2026-08-02 21:12:32,697 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Cache HIT: estimate_budget
+2026-08-02 21:12:32,909 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Tool started: estimate_budget | args={'city': 'Chennai', 'days': 3}
+2026-08-02 21:12:32,909 | INFO | cache | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Cache HIT: budget:chennai:3
+2026-08-02 21:12:32,910 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Tool completed: estimate_budget in 0.0 sec
+2026-08-02 21:12:32,910 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Cache HIT: estimate_budget
+2026-08-02 21:12:33,213 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Tool started: estimate_budget | args={'city': 'Chennai', 'days': 3}
+2026-08-02 21:12:33,214 | INFO | cache | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Cache HIT: budget:chennai:3
+2026-08-02 21:12:33,214 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Tool completed: estimate_budget in 0.0 sec
+2026-08-02 21:12:33,214 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Cache HIT: estimate_budget
+2026-08-02 21:12:33,626 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Tool started: estimate_budget | args={'city': 'Chennai', 'days': 3}
+2026-08-02 21:12:33,627 | INFO | cache | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Cache HIT: budget:chennai:3
+2026-08-02 21:12:33,628 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Tool completed: estimate_budget in 0.0 sec
+2026-08-02 21:12:33,628 | INFO | callbacks | 7cc3a498-11ec-4ea5-9623-b3008afc3850 | Cache HIT: estimate_budget
+2026-08-02 21:23:43,351 | INFO | cache | - | Cache CLEARED
+2026-08-02 21:23:43,351 | INFO | cache | - | Cache MISS: weather:goa
+2026-08-02 21:23:43,354 | INFO | cache | - | Cache STORED: weather:goa
+2026-08-02 21:23:43,355 | INFO | cache | - | Cache HIT: weather:goa
+2026-08-02 21:24:01,539 | INFO | cache | - | Cache CLEARED
+2026-08-02 21:24:01,540 | INFO | cache | - | Cache MISS: weather:goa
+2026-08-02 21:24:01,543 | INFO | cache | - | Cache STORED: weather:goa
+2026-08-02 21:24:01,544 | INFO | cache | - | Cache HIT: weather:goa
+2026-08-02 21:24:41,597 | INFO | cache | - | Cache HIT: weather:goa
+2026-08-02 21:24:41,598 | INFO | cache | - | Cache HIT: weather:goa
+2026-08-02 21:24:46,808 | INFO | cache | - | Cache HIT: weather:goa
+2026-08-02 21:24:46,809 | INFO | cache | - | Cache HIT: weather:goa
+2026-08-02 21:25:00,349 | INFO | database | da5c1e21-06a3-4db6-984e-5ae5a0058297 | Created Session 4f49ada8-fff3-4ca9-a23c-10f1ac81949c
+2026-08-02 21:25:00,385 | INFO | callbacks | da5c1e21-06a3-4db6-984e-5ae5a0058297 | Agent started
+2026-08-02 21:25:03,105 | INFO | callbacks | da5c1e21-06a3-4db6-984e-5ae5a0058297 | Tool started: get_weather | args={'city': 'Chennai'}
+2026-08-02 21:25:03,106 | INFO | cache | da5c1e21-06a3-4db6-984e-5ae5a0058297 | Cache MISS: weather:chennai
+2026-08-02 21:25:08,116 | INFO | cache | da5c1e21-06a3-4db6-984e-5ae5a0058297 | Cache STORED: weather:chennai
+2026-08-02 21:25:08,116 | INFO | callbacks | da5c1e21-06a3-4db6-984e-5ae5a0058297 | Tool completed: get_weather in 5.01 sec
+2026-08-02 21:25:08,319 | INFO | callbacks | da5c1e21-06a3-4db6-984e-5ae5a0058297 | Agent completed in 7.93 sec
+2026-08-02 21:25:08,344 | INFO | callbacks | da5c1e21-06a3-4db6-984e-5ae5a0058297 | Agent started
+2026-08-02 21:25:08,629 | INFO | callbacks | da5c1e21-06a3-4db6-984e-5ae5a0058297 | Tool started: get_hotel_price_range | args={'city': 'Chennai'}
+2026-08-02 21:25:08,630 | INFO | cache | da5c1e21-06a3-4db6-984e-5ae5a0058297 | Cache MISS: hotel:chennai
+2026-08-02 21:25:18,655 | INFO | cache | da5c1e21-06a3-4db6-984e-5ae5a0058297 | Cache STORED: hotel:chennai
+2026-08-02 21:25:18,655 | INFO | callbacks | da5c1e21-06a3-4db6-984e-5ae5a0058297 | Tool completed: get_hotel_price_range in 10.03 sec
+2026-08-02 21:25:19,068 | INFO | callbacks | da5c1e21-06a3-4db6-984e-5ae5a0058297 | Agent completed in 10.72 sec
+2026-08-02 21:25:19,095 | INFO | callbacks | da5c1e21-06a3-4db6-984e-5ae5a0058297 | Agent started
+2026-08-02 21:25:19,389 | INFO | callbacks | da5c1e21-06a3-4db6-984e-5ae5a0058297 | Tool started: estimate_budget | args={'city': 'Chennai', 'days': 3}
+2026-08-02 21:25:19,391 | INFO | cache | da5c1e21-06a3-4db6-984e-5ae5a0058297 | Cache MISS: budget:chennai:3
+2026-08-02 21:25:21,407 | INFO | cache | da5c1e21-06a3-4db6-984e-5ae5a0058297 | Cache STORED: budget:chennai:3
+2026-08-02 21:25:21,407 | INFO | callbacks | da5c1e21-06a3-4db6-984e-5ae5a0058297 | Tool completed: estimate_budget in 2.02 sec
+2026-08-02 21:25:21,630 | INFO | callbacks | da5c1e21-06a3-4db6-984e-5ae5a0058297 | Agent completed in 2.54 sec
+2026-08-02 21:25:21,658 | INFO | callbacks | da5c1e21-06a3-4db6-984e-5ae5a0058297 | Agent started
+2026-08-02 21:25:22,932 | INFO | callbacks | da5c1e21-06a3-4db6-984e-5ae5a0058297 | Agent completed in 1.27 sec
+2026-08-02 21:26:20,511 | INFO | database | 3b0bdff0-9e88-4b59-b44a-0ac194a56838 | Created Session 1566ca9f-fe9d-4e0c-ae13-27cb48ff6439
+2026-08-02 21:26:20,543 | INFO | callbacks | 3b0bdff0-9e88-4b59-b44a-0ac194a56838 | Agent started
+2026-08-02 21:26:24,923 | INFO | callbacks | 3b0bdff0-9e88-4b59-b44a-0ac194a56838 | Tool started: get_weather | args={'city': 'Chennai'}
+2026-08-02 21:26:24,924 | INFO | cache | 3b0bdff0-9e88-4b59-b44a-0ac194a56838 | Cache HIT: weather:chennai
+2026-08-02 21:26:24,924 | INFO | callbacks | 3b0bdff0-9e88-4b59-b44a-0ac194a56838 | Tool completed: get_weather in 0.0 sec
+2026-08-02 21:26:24,924 | INFO | callbacks | 3b0bdff0-9e88-4b59-b44a-0ac194a56838 | Cache HIT: get_weather
+2026-08-02 21:26:25,640 | INFO | callbacks | 3b0bdff0-9e88-4b59-b44a-0ac194a56838 | Agent completed in 5.1 sec
+2026-08-02 21:26:25,674 | INFO | callbacks | 3b0bdff0-9e88-4b59-b44a-0ac194a56838 | Agent started
+2026-08-02 21:26:25,938 | INFO | callbacks | 3b0bdff0-9e88-4b59-b44a-0ac194a56838 | Tool started: get_hotel_price_range | args={'city': 'Chennai'}
+2026-08-02 21:26:25,939 | INFO | cache | 3b0bdff0-9e88-4b59-b44a-0ac194a56838 | Cache HIT: hotel:chennai
+2026-08-02 21:26:25,939 | INFO | callbacks | 3b0bdff0-9e88-4b59-b44a-0ac194a56838 | Tool completed: get_hotel_price_range in 0.0 sec
+2026-08-02 21:26:25,939 | INFO | callbacks | 3b0bdff0-9e88-4b59-b44a-0ac194a56838 | Cache HIT: get_hotel_price_range
+2026-08-02 21:26:26,251 | INFO | callbacks | 3b0bdff0-9e88-4b59-b44a-0ac194a56838 | Agent completed in 0.58 sec
+2026-08-02 21:26:26,316 | INFO | callbacks | 3b0bdff0-9e88-4b59-b44a-0ac194a56838 | Agent started
+2026-08-02 21:26:26,751 | INFO | callbacks | 3b0bdff0-9e88-4b59-b44a-0ac194a56838 | Tool started: estimate_budget | args={'city': 'Chennai', 'days': 3}
+2026-08-02 21:26:26,751 | INFO | cache | 3b0bdff0-9e88-4b59-b44a-0ac194a56838 | Cache HIT: budget:chennai:3
+2026-08-02 21:26:26,751 | INFO | callbacks | 3b0bdff0-9e88-4b59-b44a-0ac194a56838 | Tool completed: estimate_budget in 0.0 sec
+2026-08-02 21:26:26,752 | INFO | callbacks | 3b0bdff0-9e88-4b59-b44a-0ac194a56838 | Cache HIT: estimate_budget
+2026-08-02 21:27:54,265 | INFO | database | 86f7cdeb-6fbd-4cd3-9c6a-737c77f995ff | Created Session 4c07e6b0-5396-445a-b2e2-78f51b1bd757
+2026-08-02 21:27:54,301 | INFO | callbacks | 86f7cdeb-6fbd-4cd3-9c6a-737c77f995ff | Agent started
+2026-08-02 21:27:57,283 | INFO | callbacks | 86f7cdeb-6fbd-4cd3-9c6a-737c77f995ff | Tool started: get_weather | args={'city': 'Chennai'}
+2026-08-02 21:27:57,283 | INFO | cache | 86f7cdeb-6fbd-4cd3-9c6a-737c77f995ff | Cache HIT: weather:chennai
+2026-08-02 21:27:57,284 | INFO | callbacks | 86f7cdeb-6fbd-4cd3-9c6a-737c77f995ff | Tool completed: get_weather in 0.0 sec
+2026-08-02 21:27:57,284 | INFO | callbacks | 86f7cdeb-6fbd-4cd3-9c6a-737c77f995ff | Cache HIT: get_weather
+2026-08-02 21:27:57,485 | INFO | callbacks | 86f7cdeb-6fbd-4cd3-9c6a-737c77f995ff | Agent completed in 3.18 sec
+2026-08-02 21:27:57,512 | INFO | callbacks | 86f7cdeb-6fbd-4cd3-9c6a-737c77f995ff | Agent started
+2026-08-02 21:27:57,791 | INFO | callbacks | 86f7cdeb-6fbd-4cd3-9c6a-737c77f995ff | Tool started: get_hotel_price_range | args={'city': 'Chennai'}
+2026-08-02 21:27:57,792 | INFO | cache | 86f7cdeb-6fbd-4cd3-9c6a-737c77f995ff | Cache HIT: hotel:chennai
+2026-08-02 21:27:57,792 | INFO | callbacks | 86f7cdeb-6fbd-4cd3-9c6a-737c77f995ff | Tool completed: get_hotel_price_range in 0.0 sec
+2026-08-02 21:27:57,792 | INFO | callbacks | 86f7cdeb-6fbd-4cd3-9c6a-737c77f995ff | Cache HIT: get_hotel_price_range
+2026-08-02 21:27:58,107 | INFO | callbacks | 86f7cdeb-6fbd-4cd3-9c6a-737c77f995ff | Agent completed in 0.6 sec
+2026-08-02 21:27:58,146 | INFO | callbacks | 86f7cdeb-6fbd-4cd3-9c6a-737c77f995ff | Agent started
+2026-08-02 21:27:58,408 | INFO | callbacks | 86f7cdeb-6fbd-4cd3-9c6a-737c77f995ff | Tool started: estimate_budget | args={'city': 'Chennai', 'days': 3}
+2026-08-02 21:27:58,409 | INFO | cache | 86f7cdeb-6fbd-4cd3-9c6a-737c77f995ff | Cache HIT: budget:chennai:3
+2026-08-02 21:27:58,409 | INFO | callbacks | 86f7cdeb-6fbd-4cd3-9c6a-737c77f995ff | Tool completed: estimate_budget in 0.0 sec
+2026-08-02 21:27:58,409 | INFO | callbacks | 86f7cdeb-6fbd-4cd3-9c6a-737c77f995ff | Cache HIT: estimate_budget
+2026-08-02 21:27:58,712 | INFO | callbacks | 86f7cdeb-6fbd-4cd3-9c6a-737c77f995ff | Agent completed in 0.57 sec
+2026-08-02 21:27:58,737 | INFO | callbacks | 86f7cdeb-6fbd-4cd3-9c6a-737c77f995ff | Agent started
+2026-08-02 21:27:59,842 | INFO | callbacks | 86f7cdeb-6fbd-4cd3-9c6a-737c77f995ff | Agent completed in 1.1 sec
+2026-08-02 21:43:37,556 | INFO | database | db90ba28-c42b-4afd-a273-e352d98cf2e6 | Created Session 97d20a4b-07bb-4983-94ef-822ac633a15e
+2026-08-02 21:43:37,580 | INFO | callbacks | db90ba28-c42b-4afd-a273-e352d98cf2e6 | Agent started
+2026-08-02 21:43:40,204 | INFO | callbacks | db90ba28-c42b-4afd-a273-e352d98cf2e6 | Tool started: get_weather | args={'city': 'Chennai'}
+2026-08-02 21:43:40,205 | INFO | cache | db90ba28-c42b-4afd-a273-e352d98cf2e6 | Cache HIT: weather:chennai
+2026-08-02 21:43:40,205 | INFO | callbacks | db90ba28-c42b-4afd-a273-e352d98cf2e6 | Tool completed: get_weather in 0.0 sec
+2026-08-02 21:43:40,205 | INFO | callbacks | db90ba28-c42b-4afd-a273-e352d98cf2e6 | Cache HIT: get_weather
+2026-08-02 21:43:40,472 | INFO | callbacks | db90ba28-c42b-4afd-a273-e352d98cf2e6 | Agent completed in 2.89 sec
+2026-08-02 21:43:40,491 | INFO | callbacks | db90ba28-c42b-4afd-a273-e352d98cf2e6 | Agent started
+2026-08-02 21:43:40,790 | INFO | callbacks | db90ba28-c42b-4afd-a273-e352d98cf2e6 | Tool started: get_hotel_price_range | args={'city': 'Chennai'}
+2026-08-02 21:43:40,791 | INFO | cache | db90ba28-c42b-4afd-a273-e352d98cf2e6 | Cache HIT: hotel:chennai
+2026-08-02 21:43:40,791 | INFO | callbacks | db90ba28-c42b-4afd-a273-e352d98cf2e6 | Tool completed: get_hotel_price_range in 0.0 sec
+2026-08-02 21:43:40,791 | INFO | callbacks | db90ba28-c42b-4afd-a273-e352d98cf2e6 | Cache HIT: get_hotel_price_range
+2026-08-02 21:43:41,126 | INFO | callbacks | db90ba28-c42b-4afd-a273-e352d98cf2e6 | Agent completed in 0.63 sec
+2026-08-02 21:43:41,158 | INFO | callbacks | db90ba28-c42b-4afd-a273-e352d98cf2e6 | Agent started
+2026-08-02 21:43:41,439 | INFO | callbacks | db90ba28-c42b-4afd-a273-e352d98cf2e6 | Tool started: estimate_budget | args={'city': 'Chennai', 'days': 3}
+2026-08-02 21:43:41,440 | INFO | cache | db90ba28-c42b-4afd-a273-e352d98cf2e6 | Cache HIT: budget:chennai:3
+2026-08-02 21:43:41,440 | INFO | callbacks | db90ba28-c42b-4afd-a273-e352d98cf2e6 | Tool completed: estimate_budget in 0.0 sec
+2026-08-02 21:43:41,441 | INFO | callbacks | db90ba28-c42b-4afd-a273-e352d98cf2e6 | Cache HIT: estimate_budget
+2026-08-02 21:43:41,709 | INFO | callbacks | db90ba28-c42b-4afd-a273-e352d98cf2e6 | Agent completed in 0.55 sec
+2026-08-02 21:43:41,739 | INFO | callbacks | db90ba28-c42b-4afd-a273-e352d98cf2e6 | Agent started
+2026-08-02 21:43:43,263 | INFO | callbacks | db90ba28-c42b-4afd-a273-e352d98cf2e6 | Agent completed in 1.52 sec
+2026-08-02 21:44:48,604 | INFO | database | 6ba1c46a-aece-41f8-8745-47b96e056287 | Created Session 6f0973e8-2ef5-48a2-a810-f0ea706bb16c
+2026-08-02 21:44:48,640 | INFO | callbacks | 6ba1c46a-aece-41f8-8745-47b96e056287 | Agent started
+2026-08-02 21:44:49,015 | INFO | callbacks | 6ba1c46a-aece-41f8-8745-47b96e056287 | Tool started: get_weather | args={'city': 'Chennai'}
+2026-08-02 21:44:49,016 | INFO | cache | 6ba1c46a-aece-41f8-8745-47b96e056287 | Cache HIT: weather:chennai
+2026-08-02 21:44:49,017 | INFO | callbacks | 6ba1c46a-aece-41f8-8745-47b96e056287 | Tool completed: get_weather in 0.0 sec
+2026-08-02 21:44:49,017 | INFO | callbacks | 6ba1c46a-aece-41f8-8745-47b96e056287 | Cache HIT: get_weather
+2026-08-02 21:44:49,418 | INFO | callbacks | 6ba1c46a-aece-41f8-8745-47b96e056287 | Agent completed in 0.78 sec
+2026-08-02 21:44:49,447 | INFO | callbacks | 6ba1c46a-aece-41f8-8745-47b96e056287 | Agent started
+2026-08-02 21:50:02,655 | INFO | database | 761f3549-4451-4186-9874-b55c9b143815 | Created Session eb859087-2fb8-48f7-a1a2-b08fa85033a6
+2026-08-02 21:50:02,775 | INFO | callbacks | 761f3549-4451-4186-9874-b55c9b143815 | Agent started
+2026-08-02 21:50:13,833 | INFO | callbacks | 761f3549-4451-4186-9874-b55c9b143815 | Tool started: get_weather | args={'city': 'Goa'}
+2026-08-02 21:50:13,834 | INFO | cache | 761f3549-4451-4186-9874-b55c9b143815 | Cache EXPIRED: weather:goa
+2026-08-02 21:50:18,855 | INFO | cache | 761f3549-4451-4186-9874-b55c9b143815 | Cache STORED: weather:goa
+2026-08-02 21:50:18,856 | INFO | callbacks | 761f3549-4451-4186-9874-b55c9b143815 | Tool completed: get_weather in 5.02 sec
+2026-08-02 21:50:19,207 | INFO | callbacks | 761f3549-4451-4186-9874-b55c9b143815 | Agent completed in 16.43 sec
+2026-08-02 21:50:19,239 | INFO | callbacks | 761f3549-4451-4186-9874-b55c9b143815 | Agent started
+2026-08-02 21:50:19,662 | INFO | callbacks | 761f3549-4451-4186-9874-b55c9b143815 | Tool started: get_hotel_price_range | args={'city': 'Goa'}
+2026-08-02 21:50:19,663 | INFO | cache | 761f3549-4451-4186-9874-b55c9b143815 | Cache MISS: hotel:goa
+2026-08-02 21:50:29,687 | INFO | cache | 761f3549-4451-4186-9874-b55c9b143815 | Cache STORED: hotel:goa
+2026-08-02 21:50:29,687 | INFO | callbacks | 761f3549-4451-4186-9874-b55c9b143815 | Tool completed: get_hotel_price_range in 10.02 sec
+2026-08-02 21:50:30,106 | INFO | callbacks | 761f3549-4451-4186-9874-b55c9b143815 | Agent completed in 10.87 sec
+2026-08-02 21:50:30,135 | INFO | callbacks | 761f3549-4451-4186-9874-b55c9b143815 | Agent started
+2026-08-02 21:50:30,513 | INFO | callbacks | 761f3549-4451-4186-9874-b55c9b143815 | Tool started: estimate_budget | args={'city': 'Goa', 'days': 3}
+2026-08-02 21:50:30,514 | INFO | cache | 761f3549-4451-4186-9874-b55c9b143815 | Cache MISS: budget:goa:3
+2026-08-02 21:50:32,530 | INFO | cache | 761f3549-4451-4186-9874-b55c9b143815 | Cache STORED: budget:goa:3
+2026-08-02 21:50:32,531 | INFO | callbacks | 761f3549-4451-4186-9874-b55c9b143815 | Tool completed: estimate_budget in 2.02 sec
+2026-08-02 21:50:32,874 | INFO | callbacks | 761f3549-4451-4186-9874-b55c9b143815 | Tool started: estimate_budget | args={'city': 'Goa', 'days': 3}
+2026-08-02 21:50:32,875 | INFO | cache | 761f3549-4451-4186-9874-b55c9b143815 | Cache HIT: budget:goa:3
+2026-08-02 21:50:32,875 | INFO | callbacks | 761f3549-4451-4186-9874-b55c9b143815 | Tool completed: estimate_budget in 0.0 sec
+2026-08-02 21:50:32,875 | INFO | callbacks | 761f3549-4451-4186-9874-b55c9b143815 | Cache HIT: estimate_budget
+2026-08-02 21:50:33,286 | INFO | callbacks | 761f3549-4451-4186-9874-b55c9b143815 | Agent completed in 3.15 sec
+2026-08-02 21:50:33,318 | INFO | callbacks | 761f3549-4451-4186-9874-b55c9b143815 | Agent started
+2026-08-02 21:50:34,195 | INFO | callbacks | 761f3549-4451-4186-9874-b55c9b143815 | Agent completed in 0.88 sec
+2026-08-02 21:51:18,471 | INFO | database | c2002159-4359-425d-a679-dfda24a06365 | Created Session daca48b6-644f-4cc3-bdeb-9cab43f681c4
+2026-08-02 21:51:18,582 | INFO | callbacks | c2002159-4359-425d-a679-dfda24a06365 | Agent started
+2026-08-02 21:51:22,949 | INFO | callbacks | c2002159-4359-425d-a679-dfda24a06365 | Tool started: get_weather | args={'city': 'Goa'}
+2026-08-02 21:51:22,950 | INFO | cache | c2002159-4359-425d-a679-dfda24a06365 | Cache HIT: weather:goa
+2026-08-02 21:51:22,950 | INFO | callbacks | c2002159-4359-425d-a679-dfda24a06365 | Tool completed: get_weather in 0.0 sec
+2026-08-02 21:51:22,950 | INFO | callbacks | c2002159-4359-425d-a679-dfda24a06365 | Cache HIT: get_weather
+2026-08-02 21:51:23,236 | INFO | callbacks | c2002159-4359-425d-a679-dfda24a06365 | Agent completed in 4.65 sec
+2026-08-02 21:51:23,256 | INFO | callbacks | c2002159-4359-425d-a679-dfda24a06365 | Agent started
+2026-08-02 21:51:23,655 | INFO | callbacks | c2002159-4359-425d-a679-dfda24a06365 | Tool started: get_hotel_price_range | args={'city': 'Goa'}
+2026-08-02 21:51:23,656 | INFO | cache | c2002159-4359-425d-a679-dfda24a06365 | Cache HIT: hotel:goa
+2026-08-02 21:51:23,656 | INFO | callbacks | c2002159-4359-425d-a679-dfda24a06365 | Tool completed: get_hotel_price_range in 0.0 sec
+2026-08-02 21:51:23,656 | INFO | callbacks | c2002159-4359-425d-a679-dfda24a06365 | Cache HIT: get_hotel_price_range
+2026-08-02 21:51:23,960 | INFO | callbacks | c2002159-4359-425d-a679-dfda24a06365 | Agent completed in 0.7 sec
+2026-08-02 21:51:23,998 | INFO | callbacks | c2002159-4359-425d-a679-dfda24a06365 | Agent started
+2026-08-02 21:51:24,270 | INFO | callbacks | c2002159-4359-425d-a679-dfda24a06365 | Tool started: estimate_budget | args={'city': 'Goa', 'days': 3}
+2026-08-02 21:51:24,271 | INFO | cache | c2002159-4359-425d-a679-dfda24a06365 | Cache HIT: budget:goa:3
+2026-08-02 21:51:24,272 | INFO | callbacks | c2002159-4359-425d-a679-dfda24a06365 | Tool completed: estimate_budget in 0.0 sec
+2026-08-02 21:51:24,272 | INFO | callbacks | c2002159-4359-425d-a679-dfda24a06365 | Cache HIT: estimate_budget
+2026-08-02 21:51:24,718 | INFO | callbacks | c2002159-4359-425d-a679-dfda24a06365 | Agent completed in 0.72 sec
+2026-08-02 21:51:24,818 | INFO | callbacks | c2002159-4359-425d-a679-dfda24a06365 | Agent started
+2026-08-02 21:51:26,044 | INFO | callbacks | c2002159-4359-425d-a679-dfda24a06365 | Agent completed in 1.23 sec
+2026-08-02 21:56:12,772 | INFO | database | 79b9a8ca-8f05-435a-aa5a-1be16181576e | Created Session 5100a7a1-7504-48cc-a488-d8dbd3e0c31f
+2026-08-02 21:56:12,899 | INFO | callbacks | 79b9a8ca-8f05-435a-aa5a-1be16181576e | Agent started
+2026-08-02 21:56:21,778 | INFO | callbacks | 79b9a8ca-8f05-435a-aa5a-1be16181576e | Tool started: get_weather | args={'city': 'Goa'}
+2026-08-02 21:56:21,779 | INFO | cache | 79b9a8ca-8f05-435a-aa5a-1be16181576e | Cache HIT: weather:goa
+2026-08-02 21:56:21,779 | INFO | callbacks | 79b9a8ca-8f05-435a-aa5a-1be16181576e | Tool completed: get_weather in 0.0 sec
+2026-08-02 21:56:21,779 | INFO | callbacks | 79b9a8ca-8f05-435a-aa5a-1be16181576e | Cache HIT: get_weather
+2026-08-02 21:56:22,170 | INFO | callbacks | 79b9a8ca-8f05-435a-aa5a-1be16181576e | Agent completed in 9.27 sec
+2026-08-02 21:56:22,206 | INFO | callbacks | 79b9a8ca-8f05-435a-aa5a-1be16181576e | Agent started
+2026-08-02 21:56:22,577 | INFO | callbacks | 79b9a8ca-8f05-435a-aa5a-1be16181576e | Tool started: get_hotel_price_range | args={'city': 'Goa'}
+2026-08-02 21:56:22,578 | INFO | cache | 79b9a8ca-8f05-435a-aa5a-1be16181576e | Cache HIT: hotel:goa
+2026-08-02 21:56:22,578 | INFO | callbacks | 79b9a8ca-8f05-435a-aa5a-1be16181576e | Tool completed: get_hotel_price_range in 0.0 sec
+2026-08-02 21:56:22,578 | INFO | callbacks | 79b9a8ca-8f05-435a-aa5a-1be16181576e | Cache HIT: get_hotel_price_range
+2026-08-02 21:56:22,988 | INFO | callbacks | 79b9a8ca-8f05-435a-aa5a-1be16181576e | Agent completed in 0.78 sec
+2026-08-02 21:56:23,027 | INFO | callbacks | 79b9a8ca-8f05-435a-aa5a-1be16181576e | Agent started
+2026-08-02 21:56:23,392 | INFO | callbacks | 79b9a8ca-8f05-435a-aa5a-1be16181576e | Tool started: estimate_budget | args={'city': 'Goa', 'days': 3}
+2026-08-02 21:56:23,393 | INFO | cache | 79b9a8ca-8f05-435a-aa5a-1be16181576e | Cache HIT: budget:goa:3
+2026-08-02 21:56:23,393 | INFO | callbacks | 79b9a8ca-8f05-435a-aa5a-1be16181576e | Tool completed: estimate_budget in 0.0 sec
+2026-08-02 21:56:23,393 | INFO | callbacks | 79b9a8ca-8f05-435a-aa5a-1be16181576e | Cache HIT: estimate_budget
+2026-08-02 21:56:24,521 | INFO | callbacks | 79b9a8ca-8f05-435a-aa5a-1be16181576e | Agent completed in 1.49 sec
+2026-08-02 21:56:24,546 | INFO | callbacks | 79b9a8ca-8f05-435a-aa5a-1be16181576e | Agent started
+2026-08-02 21:56:25,942 | INFO | callbacks | 79b9a8ca-8f05-435a-aa5a-1be16181576e | Agent completed in 1.4 sec
+2026-08-02 21:57:26,346 | INFO | database | f5e4e0a2-64d8-4363-8a08-bafcd045523c | Created Session caa0dbab-b0c1-4a3c-b53a-91259e97cdb9
+2026-08-02 21:57:26,406 | INFO | callbacks | f5e4e0a2-64d8-4363-8a08-bafcd045523c | Agent started
+2026-08-02 21:57:26,799 | INFO | callbacks | f5e4e0a2-64d8-4363-8a08-bafcd045523c | Tool started: get_weather | args={'city': 'Goa'}
+2026-08-02 21:57:26,802 | INFO | cache | f5e4e0a2-64d8-4363-8a08-bafcd045523c | Cache HIT: weather:goa
+2026-08-02 21:57:26,802 | INFO | callbacks | f5e4e0a2-64d8-4363-8a08-bafcd045523c | Tool completed: get_weather in 0.0 sec
+2026-08-02 21:57:26,803 | INFO | callbacks | f5e4e0a2-64d8-4363-8a08-bafcd045523c | Cache HIT: get_weather
+2026-08-02 21:57:27,315 | INFO | callbacks | f5e4e0a2-64d8-4363-8a08-bafcd045523c | Agent completed in 0.91 sec
+2026-08-02 21:57:27,400 | INFO | callbacks | f5e4e0a2-64d8-4363-8a08-bafcd045523c | Agent started
+2026-08-02 21:57:27,927 | INFO | callbacks | f5e4e0a2-64d8-4363-8a08-bafcd045523c | Tool started: get_hotel_price_range | args={'city': 'Goa'}
+2026-08-02 21:57:27,929 | INFO | cache | f5e4e0a2-64d8-4363-8a08-bafcd045523c | Cache HIT: hotel:goa
+2026-08-02 21:57:27,930 | INFO | callbacks | f5e4e0a2-64d8-4363-8a08-bafcd045523c | Tool completed: get_hotel_price_range in 0.0 sec
+2026-08-02 21:57:27,930 | INFO | callbacks | f5e4e0a2-64d8-4363-8a08-bafcd045523c | Cache HIT: get_hotel_price_range
+2026-08-02 21:57:28,342 | INFO | callbacks | f5e4e0a2-64d8-4363-8a08-bafcd045523c | Agent completed in 0.94 sec
+2026-08-02 21:57:28,387 | INFO | callbacks | f5e4e0a2-64d8-4363-8a08-bafcd045523c | Agent started
+2026-08-02 21:57:28,745 | INFO | callbacks | f5e4e0a2-64d8-4363-8a08-bafcd045523c | Tool started: estimate_budget | args={'city': 'Goa', 'days': 3}
+2026-08-02 21:57:28,747 | INFO | cache | f5e4e0a2-64d8-4363-8a08-bafcd045523c | Cache HIT: budget:goa:3
+2026-08-02 21:57:28,747 | INFO | callbacks | f5e4e0a2-64d8-4363-8a08-bafcd045523c | Tool completed: estimate_budget in 0.0 sec
+2026-08-02 21:57:28,747 | INFO | callbacks | f5e4e0a2-64d8-4363-8a08-bafcd045523c | Cache HIT: estimate_budget
+2026-08-02 21:57:29,044 | INFO | callbacks | f5e4e0a2-64d8-4363-8a08-bafcd045523c | Agent completed in 0.66 sec
+2026-08-02 21:57:29,133 | INFO | callbacks | f5e4e0a2-64d8-4363-8a08-bafcd045523c | Agent started
+2026-08-02 21:57:30,579 | INFO | callbacks | f5e4e0a2-64d8-4363-8a08-bafcd045523c | Agent completed in 1.45 sec
+2026-08-02 22:03:02,691 | INFO | database | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Created Session fb2d2862-4f33-4826-9262-56f0287b9a0f
+2026-08-02 22:03:02,728 | INFO | callbacks | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Agent started
+2026-08-02 22:03:05,529 | INFO | callbacks | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Tool started: get_weather | args={'city': 'Chennai'}
+2026-08-02 22:03:05,530 | INFO | cache | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Cache EXPIRED: weather:chennai
+2026-08-02 22:03:10,557 | INFO | cache | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Cache STORED: weather:chennai
+2026-08-02 22:03:10,557 | INFO | callbacks | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Tool completed: get_weather in 5.03 sec
+2026-08-02 22:03:10,834 | INFO | callbacks | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Agent completed in 8.11 sec
+2026-08-02 22:03:10,873 | INFO | callbacks | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Agent started
+2026-08-02 22:03:11,246 | INFO | callbacks | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Tool started: get_hotel_price_range | args={'city': 'Chennai'}
+2026-08-02 22:03:11,248 | INFO | cache | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Cache HIT: hotel:chennai
+2026-08-02 22:03:11,248 | INFO | callbacks | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Tool completed: get_hotel_price_range in 0.0 sec
+2026-08-02 22:03:11,248 | INFO | callbacks | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Cache HIT: get_hotel_price_range
+2026-08-02 22:03:11,527 | INFO | callbacks | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Agent completed in 0.65 sec
+2026-08-02 22:03:11,563 | INFO | callbacks | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Agent started
+2026-08-02 22:03:11,966 | INFO | callbacks | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Tool started: estimate_budget | args={'city': 'Chennai', 'days': 3}
+2026-08-02 22:03:11,967 | INFO | cache | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Cache HIT: budget:chennai:3
+2026-08-02 22:03:11,967 | INFO | callbacks | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Tool completed: estimate_budget in 0.0 sec
+2026-08-02 22:03:11,967 | INFO | callbacks | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Cache HIT: estimate_budget
+2026-08-02 22:03:12,360 | INFO | callbacks | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Tool started: estimate_budget | args={'city': 'Chennai', 'days': 3}
+2026-08-02 22:03:12,361 | INFO | cache | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Cache HIT: budget:chennai:3
+2026-08-02 22:03:12,361 | INFO | callbacks | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Tool completed: estimate_budget in 0.0 sec
+2026-08-02 22:03:12,361 | INFO | callbacks | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Cache HIT: estimate_budget
+2026-08-02 22:03:12,689 | INFO | callbacks | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Tool started: estimate_budget | args={'city': 'Chennai', 'days': 3}
+2026-08-02 22:03:12,690 | INFO | cache | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Cache HIT: budget:chennai:3
+2026-08-02 22:03:12,690 | INFO | callbacks | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Tool completed: estimate_budget in 0.0 sec
+2026-08-02 22:03:12,690 | INFO | callbacks | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Cache HIT: estimate_budget
+2026-08-02 22:03:13,083 | INFO | callbacks | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Agent completed in 1.52 sec
+2026-08-02 22:03:13,123 | INFO | callbacks | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Agent started
+2026-08-02 22:03:14,514 | INFO | callbacks | 5d99d56c-4f86-4c30-91ec-9792b38148eb | Agent completed in 1.39 sec
+2026-08-02 22:04:48,674 | INFO | database | 29f51e58-8f55-49b1-be08-258b44d147b1 | Created Session 4e3816f0-64e6-42f4-929f-3b5883bbf252
+2026-08-02 22:04:48,720 | INFO | callbacks | 29f51e58-8f55-49b1-be08-258b44d147b1 | Agent started
+2026-08-02 22:04:51,588 | INFO | callbacks | 29f51e58-8f55-49b1-be08-258b44d147b1 | Tool started: get_weather | args={'city': 'Chennai'}
+2026-08-02 22:04:51,589 | INFO | cache | 29f51e58-8f55-49b1-be08-258b44d147b1 | Cache HIT: weather:chennai
+2026-08-02 22:04:51,589 | INFO | callbacks | 29f51e58-8f55-49b1-be08-258b44d147b1 | Tool completed: get_weather in 0.0 sec
+2026-08-02 22:04:51,589 | INFO | callbacks | 29f51e58-8f55-49b1-be08-258b44d147b1 | Cache HIT: get_weather
+2026-08-02 22:04:51,917 | INFO | callbacks | 29f51e58-8f55-49b1-be08-258b44d147b1 | Agent completed in 3.2 sec
+2026-08-02 22:04:51,949 | INFO | callbacks | 29f51e58-8f55-49b1-be08-258b44d147b1 | Agent started
+2026-08-02 22:04:52,216 | INFO | callbacks | 29f51e58-8f55-49b1-be08-258b44d147b1 | Tool started: get_hotel_price_range | args={'city': 'Chennai'}
+2026-08-02 22:04:52,217 | INFO | cache | 29f51e58-8f55-49b1-be08-258b44d147b1 | Cache HIT: hotel:chennai
+2026-08-02 22:04:52,217 | INFO | callbacks | 29f51e58-8f55-49b1-be08-258b44d147b1 | Tool completed: get_hotel_price_range in 0.0 sec
+2026-08-02 22:04:52,217 | INFO | callbacks | 29f51e58-8f55-49b1-be08-258b44d147b1 | Cache HIT: get_hotel_price_range
+2026-08-02 22:04:52,521 | INFO | callbacks | 29f51e58-8f55-49b1-be08-258b44d147b1 | Agent completed in 0.57 sec
+2026-08-02 22:04:52,557 | INFO | callbacks | 29f51e58-8f55-49b1-be08-258b44d147b1 | Agent started
+2026-08-02 22:04:52,930 | INFO | callbacks | 29f51e58-8f55-49b1-be08-258b44d147b1 | Tool started: estimate_budget | args={'city': 'Chennai', 'days': 3}
+2026-08-02 22:04:52,932 | INFO | cache | 29f51e58-8f55-49b1-be08-258b44d147b1 | Cache HIT: budget:chennai:3
+2026-08-02 22:04:52,932 | INFO | callbacks | 29f51e58-8f55-49b1-be08-258b44d147b1 | Tool completed: estimate_budget in 0.0 sec
+2026-08-02 22:04:52,932 | INFO | callbacks | 29f51e58-8f55-49b1-be08-258b44d147b1 | Cache HIT: estimate_budget
+2026-08-02 22:04:53,239 | INFO | callbacks | 29f51e58-8f55-49b1-be08-258b44d147b1 | Agent completed in 0.68 sec
+2026-08-02 22:04:53,272 | INFO | callbacks | 29f51e58-8f55-49b1-be08-258b44d147b1 | Agent started
+2026-08-02 22:04:54,868 | INFO | callbacks | 29f51e58-8f55-49b1-be08-258b44d147b1 | Agent completed in 1.6 sec
+2026-08-02 22:08:57,696 | INFO | database | 15a23d5d-6dd2-4157-8c2f-9033ab951c1e | Created Session 87282156-27c6-4011-88a5-71f4dda6265e
+2026-08-02 22:08:57,737 | INFO | callbacks | 15a23d5d-6dd2-4157-8c2f-9033ab951c1e | Agent started
+2026-08-02 22:09:00,654 | INFO | callbacks | 15a23d5d-6dd2-4157-8c2f-9033ab951c1e | Tool started: get_weather | args={'city': 'Chennai'}
+2026-08-02 22:09:00,655 | INFO | cache | 15a23d5d-6dd2-4157-8c2f-9033ab951c1e | Cache HIT: weather:chennai
+2026-08-02 22:09:00,655 | INFO | callbacks | 15a23d5d-6dd2-4157-8c2f-9033ab951c1e | Tool completed: get_weather in 0.0 sec
+2026-08-02 22:09:00,655 | INFO | callbacks | 15a23d5d-6dd2-4157-8c2f-9033ab951c1e | Cache HIT: get_weather
+2026-08-02 22:09:00,866 | INFO | callbacks | 15a23d5d-6dd2-4157-8c2f-9033ab951c1e | Agent completed in 3.13 sec
+2026-08-02 22:09:00,905 | INFO | callbacks | 15a23d5d-6dd2-4157-8c2f-9033ab951c1e | Agent started
+2026-08-02 22:09:01,153 | INFO | callbacks | 15a23d5d-6dd2-4157-8c2f-9033ab951c1e | Tool started: get_hotel_price_range | args={'city': 'Chennai'}
+2026-08-02 22:09:01,154 | INFO | cache | 15a23d5d-6dd2-4157-8c2f-9033ab951c1e | Cache HIT: hotel:chennai
+2026-08-02 22:09:01,154 | INFO | callbacks | 15a23d5d-6dd2-4157-8c2f-9033ab951c1e | Tool completed: get_hotel_price_range in 0.0 sec
+2026-08-02 22:09:01,154 | INFO | callbacks | 15a23d5d-6dd2-4157-8c2f-9033ab951c1e | Cache HIT: get_hotel_price_range
+2026-08-02 22:09:01,460 | INFO | callbacks | 15a23d5d-6dd2-4157-8c2f-9033ab951c1e | Agent completed in 0.56 sec
+2026-08-02 22:09:01,499 | INFO | callbacks | 15a23d5d-6dd2-4157-8c2f-9033ab951c1e | Agent started
+2026-08-02 22:09:01,767 | INFO | callbacks | 15a23d5d-6dd2-4157-8c2f-9033ab951c1e | Tool started: estimate_budget | args={'city': 'Chennai', 'days': 3}
+2026-08-02 22:09:01,768 | INFO | cache | 15a23d5d-6dd2-4157-8c2f-9033ab951c1e | Cache HIT: budget:chennai:3
+2026-08-02 22:09:01,768 | INFO | callbacks | 15a23d5d-6dd2-4157-8c2f-9033ab951c1e | Tool completed: estimate_budget in 0.0 sec
+2026-08-02 22:09:01,768 | INFO | callbacks | 15a23d5d-6dd2-4157-8c2f-9033ab951c1e | Cache HIT: estimate_budget
+2026-08-02 22:09:02,172 | INFO | callbacks | 15a23d5d-6dd2-4157-8c2f-9033ab951c1e | Agent completed in 0.67 sec
+2026-08-02 22:09:02,201 | INFO | callbacks | 15a23d5d-6dd2-4157-8c2f-9033ab951c1e | Agent started
+2026-08-02 22:09:03,508 | INFO | callbacks | 15a23d5d-6dd2-4157-8c2f-9033ab951c1e | Agent completed in 1.31 sec
+2026-08-03 07:56:42,219 | INFO | database | 57f70e78-9203-438c-b126-c8d5c1a72599 | Created Session 1cffcbf8-d64d-4be9-a4c6-3281f8236861
+2026-08-03 07:56:42,264 | INFO | callbacks | 57f70e78-9203-438c-b126-c8d5c1a72599 | Agent started
+2026-08-03 07:56:47,177 | INFO | callbacks | 57f70e78-9203-438c-b126-c8d5c1a72599 | Tool started: get_weather | args={'city': 'Chennai'}
+2026-08-03 07:56:47,178 | INFO | cache | 57f70e78-9203-438c-b126-c8d5c1a72599 | Cache EXPIRED: weather:chennai
+2026-08-03 07:56:52,197 | INFO | cache | 57f70e78-9203-438c-b126-c8d5c1a72599 | Cache STORED: weather:chennai
+2026-08-03 07:56:52,198 | INFO | callbacks | 57f70e78-9203-438c-b126-c8d5c1a72599 | Tool completed: get_weather in 5.02 sec
+2026-08-03 07:56:52,427 | INFO | callbacks | 57f70e78-9203-438c-b126-c8d5c1a72599 | Agent completed in 10.16 sec
+2026-08-03 07:56:52,477 | INFO | callbacks | 57f70e78-9203-438c-b126-c8d5c1a72599 | Agent started
+2026-08-03 07:56:52,718 | INFO | callbacks | 57f70e78-9203-438c-b126-c8d5c1a72599 | Tool started: get_hotel_price_range | args={'city': 'Chennai'}
+2026-08-03 07:56:52,720 | INFO | cache | 57f70e78-9203-438c-b126-c8d5c1a72599 | Cache EXPIRED: hotel:chennai
+2026-08-03 07:57:02,747 | INFO | cache | 57f70e78-9203-438c-b126-c8d5c1a72599 | Cache STORED: hotel:chennai
+2026-08-03 07:57:02,747 | INFO | callbacks | 57f70e78-9203-438c-b126-c8d5c1a72599 | Tool completed: get_hotel_price_range in 10.03 sec
+2026-08-03 07:57:03,154 | INFO | callbacks | 57f70e78-9203-438c-b126-c8d5c1a72599 | Agent completed in 10.68 sec
+2026-08-03 07:57:03,191 | INFO | callbacks | 57f70e78-9203-438c-b126-c8d5c1a72599 | Agent started
+2026-08-03 07:57:03,570 | INFO | callbacks | 57f70e78-9203-438c-b126-c8d5c1a72599 | Tool started: estimate_budget | args={'city': 'Chennai', 'days': 3}
+2026-08-03 07:57:03,571 | INFO | cache | 57f70e78-9203-438c-b126-c8d5c1a72599 | Cache HIT: budget:chennai:3
+2026-08-03 07:57:03,571 | INFO | callbacks | 57f70e78-9203-438c-b126-c8d5c1a72599 | Tool completed: estimate_budget in 0.0 sec
+2026-08-03 07:57:03,572 | INFO | callbacks | 57f70e78-9203-438c-b126-c8d5c1a72599 | Cache HIT: estimate_budget
+2026-08-03 07:57:03,817 | INFO | callbacks | 57f70e78-9203-438c-b126-c8d5c1a72599 | Tool started: estimate_budget | args={'city': 'Chennai', 'days': 3}
+2026-08-03 07:57:03,820 | INFO | cache | 57f70e78-9203-438c-b126-c8d5c1a72599 | Cache HIT: budget:chennai:3
+2026-08-03 07:57:03,820 | INFO | callbacks | 57f70e78-9203-438c-b126-c8d5c1a72599 | Tool completed: estimate_budget in 0.0 sec
+2026-08-03 07:57:03,820 | INFO | callbacks | 57f70e78-9203-438c-b126-c8d5c1a72599 | Cache HIT: estimate_budget
+2026-08-03 07:57:04,078 | INFO | callbacks | 57f70e78-9203-438c-b126-c8d5c1a72599 | Agent completed in 0.89 sec
+2026-08-03 07:57:04,119 | INFO | callbacks | 57f70e78-9203-438c-b126-c8d5c1a72599 | Agent started
+2026-08-03 07:57:05,189 | INFO | callbacks | 57f70e78-9203-438c-b126-c8d5c1a72599 | Agent completed in 1.07 sec
+2026-08-03 08:02:34,935 | INFO | database | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Created Session 305810c6-f7c7-4f2c-8903-1609931f7d49
+2026-08-03 08:02:34,953 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Agent started
+2026-08-03 08:02:35,532 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Tool started: get_weather | args={'city': 'Goa'}
+2026-08-03 08:02:35,532 | INFO | cache | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Cache EXPIRED: weather:goa
+2026-08-03 08:02:40,552 | INFO | cache | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Cache STORED: weather:goa
+2026-08-03 08:02:40,552 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Tool completed: get_weather in 5.02 sec
+2026-08-03 08:02:40,754 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Agent completed in 5.8 sec
+2026-08-03 08:02:40,777 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Agent started
+2026-08-03 08:02:41,066 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Tool started: get_hotel_price_range | args={'city': 'Goa'}
+2026-08-03 08:02:41,067 | INFO | cache | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Cache EXPIRED: hotel:goa
+2026-08-03 08:02:51,084 | INFO | cache | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Cache STORED: hotel:goa
+2026-08-03 08:02:51,084 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Tool completed: get_hotel_price_range in 10.02 sec
+2026-08-03 08:02:51,316 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Agent completed in 10.54 sec
+2026-08-03 08:02:51,347 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Agent started
+2026-08-03 08:02:51,611 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Tool started: estimate_budget | args={'city': 'Goa', 'days': 3}
+2026-08-03 08:02:51,612 | INFO | cache | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Cache HIT: budget:goa:3
+2026-08-03 08:02:51,612 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Tool completed: estimate_budget in 0.0 sec
+2026-08-03 08:02:51,612 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Cache HIT: estimate_budget
+2026-08-03 08:02:51,929 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Tool started: estimate_budget | args={'city': 'Goa', 'days': 3}
+2026-08-03 08:02:51,930 | INFO | cache | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Cache HIT: budget:goa:3
+2026-08-03 08:02:51,931 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Tool completed: estimate_budget in 0.0 sec
+2026-08-03 08:02:51,931 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Cache HIT: estimate_budget
+2026-08-03 08:02:52,331 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Tool started: estimate_budget | args={'city': 'Goa', 'days': 3}
+2026-08-03 08:02:52,332 | INFO | cache | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Cache HIT: budget:goa:3
+2026-08-03 08:02:52,332 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Tool completed: estimate_budget in 0.0 sec
+2026-08-03 08:02:52,332 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Cache HIT: estimate_budget
+2026-08-03 08:02:53,054 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Tool started: estimate_budget | args={'city': 'Goa', 'days': 3}
+2026-08-03 08:02:53,055 | INFO | cache | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Cache HIT: budget:goa:3
+2026-08-03 08:02:53,055 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Tool completed: estimate_budget in 0.0 sec
+2026-08-03 08:02:53,055 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Cache HIT: estimate_budget
+2026-08-03 08:02:53,358 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Tool started: estimate_budget | args={'city': 'Goa', 'days': 3}
+2026-08-03 08:02:53,359 | INFO | cache | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Cache HIT: budget:goa:3
+2026-08-03 08:02:53,359 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Tool completed: estimate_budget in 0.0 sec
+2026-08-03 08:02:53,359 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Cache HIT: estimate_budget
+2026-08-03 08:02:53,772 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Tool started: estimate_budget | args={'city': 'Goa', 'days': 3}
+2026-08-03 08:02:53,773 | INFO | cache | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Cache HIT: budget:goa:3
+2026-08-03 08:02:53,773 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Tool completed: estimate_budget in 0.0 sec
+2026-08-03 08:02:53,773 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Cache HIT: estimate_budget
+2026-08-03 08:02:53,998 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Tool started: estimate_budget | args={'city': 'Goa', 'days': 3}
+2026-08-03 08:02:53,999 | INFO | cache | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Cache HIT: budget:goa:3
+2026-08-03 08:02:53,999 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Tool completed: estimate_budget in 0.0 sec
+2026-08-03 08:02:53,999 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Cache HIT: estimate_budget
+2026-08-03 08:02:54,278 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Tool started: estimate_budget | args={'city': 'Goa', 'days': 3}
+2026-08-03 08:02:54,279 | INFO | cache | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Cache HIT: budget:goa:3
+2026-08-03 08:02:54,279 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Tool completed: estimate_budget in 0.0 sec
+2026-08-03 08:02:54,279 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Cache HIT: estimate_budget
+2026-08-03 08:02:54,592 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Tool started: estimate_budget | args={'city': 'Goa', 'days': 3}
+2026-08-03 08:02:54,593 | INFO | cache | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Cache HIT: budget:goa:3
+2026-08-03 08:02:54,593 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Tool completed: estimate_budget in 0.0 sec
+2026-08-03 08:02:54,593 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Cache HIT: estimate_budget
+2026-08-03 08:02:54,848 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Agent completed in 3.5 sec
+2026-08-03 08:02:54,906 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Agent started
+2026-08-03 08:02:56,019 | INFO | callbacks | 0a2dc07c-40fb-45f4-ab03-a1df6382e1bf | Agent completed in 1.11 sec
