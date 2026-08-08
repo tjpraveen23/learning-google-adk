@@ -15,13 +15,13 @@ on:
     branches: [ main ]
     paths:
       - 'TravelMateAI/15-production-grade/**'
-      - '.github/workflows/ci.yml'
+      - '.github/workflows/TravelMateAI-CI.yml'
 
   pull_request:
     branches: [ main ]
     paths:
       - 'TravelMateAI/15-production-grade/**'
-      - '.github/workflows/ci.yml'
+      - '.github/workflows/TravelMateAI-CI.yml'
 
 # --------------------------------------------------------------
 # Jobs
