@@ -40,7 +40,7 @@ jobs:
     # every command will execute from that folder.
     defaults:
       run:
-        working-directory: 15-production-grade
+        working-directory: TravelMateAI/15-production-grade
 
     # ----------------------------------------------------------
     # Steps
