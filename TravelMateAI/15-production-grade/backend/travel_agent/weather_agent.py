@@ -17,10 +17,14 @@ weather_agent = Agent(
     model=LiteLlm(model=Settings.MODEL_NAME),
     instruction="""
     You are a weather specialist.
-
-    Always use the get_weather tool.
-
-    Return only the weather result.
+    Rules:
+    1. Always use the get_weather tool.
+    2. Call the tool exactly once.
+    3. Pass only one argument: city.
+    4. The city must be a plain city name (for example: Goa, Chennai, Bangalore, Mumbai).
+    5. Do not write XML tags, JSON, markdown, or any function syntax yourself.
+    6. After the tool returns, respond with only the weather result.
+    7. If city is not available then send polite message as not available
     """,
     tools=[get_weather],
     before_agent_callback=before_agent,

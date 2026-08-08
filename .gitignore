@@ -1,0 +1,5 @@
+/TravelMateAI/*.env
+/TravelMateAI/01-simple-agent/travel_agent/__pycache__/*.pyc
+*.pyc
+/TravelMateAI/15-production-grade/backend/*.env
+/UsageLensAI/*.env

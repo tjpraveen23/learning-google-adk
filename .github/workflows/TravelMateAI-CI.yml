@@ -1,0 +1,163 @@
+# ==============================================================
+# TravelMate AI - GitHub Actions CI Pipeline
+# This workflow automatically builds and validates the Dockerized application
+# ==============================================================
+
+# Name displayed in the GitHub Actions tab
+name: TravelMate CI
+
+# --------------------------------------------------------------
+# Trigger conditions
+# --------------------------------------------------------------
+on:
+  # Run the workflow whenever code is pushed to the main branch
+  push:
+    branches: [ main ]
+    paths:
+      - 'TravelMateAI/15-production-grade/**'
+      - '.github/workflows/ci.yml'
+
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'TravelMateAI/15-production-grade/**'
+      - '.github/workflows/ci.yml'
+
+# --------------------------------------------------------------
+# Jobs
+# A workflow can contain multiple jobs.
+# Here we have one job called docker-build-test.
+# --------------------------------------------------------------
+jobs:
+
+  docker-build-test:
+
+    # GitHub creates a fresh Ubuntu virtual machine for this job.
+    runs-on: ubuntu-latest
+
+    # Default working directory for all run commands.
+    # Since your project is inside the 15-production-grade folder,
+    # every command will execute from that folder.
+    defaults:
+      run:
+        working-directory: 15-production-grade
+
+    # ----------------------------------------------------------
+    # Steps
+    # Steps execute sequentially.
+    # ----------------------------------------------------------
+    steps:
+
+      # --------------------------------------------------------
+      # Step 1: Checkout repository
+      # Downloads your GitHub repository into the runner.
+      # Without this step, the runner has no project files.
+      # --------------------------------------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # --------------------------------------------------------
+      # Step 2: Enable Docker Buildx
+      # Buildx provides modern Docker build capabilities and
+      # better layer caching support.
+      # --------------------------------------------------------
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      # --------------------------------------------------------
+      # Step 3: Create backend .env file
+      # GitHub Actions should not store .env files in the repo.
+      # This step creates a temporary .env file during CI.
+      # Replace the secret names with your GitHub repository secrets.
+      # --------------------------------------------------------
+      - name: Create backend .env
+        run: |
+          cat > backend/.env << EOF
+          MODEL_NAME=groq/llama-3.3-70b-versatile
+          GROQ_API_KEY=${{ secrets.GROQ_API_KEY }}
+          TRACING_ENABLED=false
+          WEATHER_CACHE_TTL=3600
+          HOTEL_CACHE_TTL=3600
+          BUDGET_CACHE_TTL=3600
+          SESSION_DB=data/sessions.db
+          CACHE_DB=data/cache.db
+          APP_NAME=travelmate
+          EOF
+
+      # --------------------------------------------------------
+      # Step 4: Build Docker images
+      # Equivalent to:
+      # docker compose build
+      # This validates that both backend and frontend images build successfully.
+      # --------------------------------------------------------
+      - name: Build Docker images
+        run: docker compose build
+
+      # --------------------------------------------------------
+      # Step 5: Start the containers
+      # -d = detached mode (background execution)
+      # --------------------------------------------------------
+      - name: Start containers
+        run: docker compose up -d
+
+      # --------------------------------------------------------
+      # Step 6: Wait for backend
+      # The application may take time to start.
+      # We repeatedly call the FastAPI docs endpoint until it responds.
+      # If it never starts, print the logs and fail the workflow.
+      # --------------------------------------------------------
+      - name: Wait for backend
+        run: |
+          for i in {1..30}; do
+            if curl -f http://localhost:8000/docs > /dev/null; then
+              echo "Backend is ready"
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "Backend failed to start"
+          docker compose logs backend
+          exit 1
+
+      # --------------------------------------------------------
+      # Step 7: Wait for frontend
+      # Verifies that Streamlit is accessible.
+      # --------------------------------------------------------
+      - name: Wait for frontend
+        run: |
+          for i in {1..30}; do
+            if curl -f http://localhost:8501 > /dev/null; then
+              echo "Frontend is ready"
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "Frontend failed to start"
+          docker compose logs frontend
+          exit 1
+
+      # --------------------------------------------------------
+      # Step 8: Verify API endpoint
+      # This is an actual integration test.
+      # It sends a request to your FastAPI application and
+      # ensures the endpoint responds successfully.
+      # --------------------------------------------------------
+      - name: Verify API health
+        run: |
+          curl -X GET http://localhost:8000/docs
+
+      # --------------------------------------------------------
+      # Step 9: Print container status
+      # Useful for debugging failed workflows.
+      # --------------------------------------------------------
+      - name: Show container status
+        run: docker compose ps
+
+      # --------------------------------------------------------
+      # Step 10: Stop containers
+      # if: always() means this step runs even if previous steps fail.
+      # This prevents orphaned containers in the GitHub runner.
+      # --------------------------------------------------------
+      - name: Stop containers
+        if: always()
+        run: docker compose down

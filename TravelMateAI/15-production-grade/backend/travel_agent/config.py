@@ -36,7 +36,7 @@ class Settings:
     APP_NAME = os.getenv("APP_NAME", "travelmate")
     ENVIRONMENT = os.getenv("ENVIRONMENT", "dev")
 
-    MODEL_NAME = os.getenv("GROQ_MODEL")
+    MODEL_NAME = os.getenv("MODEL_NAME")
 
     SESSION_DB = str(DATA_DIR / "travelmate.db")
     CACHE_DB = str(DATA_DIR / "cache.db")
@@ -48,3 +48,5 @@ class Settings:
     ITINERARY_CACHE_TTL = int(os.getenv("ITINERARY_CACHE_TTL", "900"))
 
     FILE_LOG_ENTRY = os.getenv("FILE_LOG_ENTRY", "no")
+    TRACING_ENABLED = os.getenv("TRACING_ENABLED", "no")
+    

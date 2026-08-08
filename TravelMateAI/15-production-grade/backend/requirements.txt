@@ -5,12 +5,11 @@ litellm
 aiosqlite
 google-adk[db]
 fastapi
-uvicorn
-streamlit
 opentelemetry-api
 opentelemetry-sdk
 sseclient-py
 sse-starlette
+fastapi
+uvicorn
 arize-phoenix 
-opentelemetry-sdk 
 openinference-instrumentation

@@ -22,6 +22,13 @@ from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from sse_starlette.sse import EventSourceResponse
 from travel_agent.orchestrator import process_travel_request_stream
+from fastapi.responses import JSONResponse
+from travel_agent.tracing import tracer
+
+from travel_agent.database import (
+    list_sessions,
+    get_session_history,
+)
 
 app = FastAPI(
     title="TravelMate API",
@@ -50,6 +57,34 @@ async def health():
         "service": "travelmate",
     }
 
+@app.get("/trace-test")
+async def trace_test():
+    with tracer.start_as_current_span("Manual Test Span") as span:
+        span.set_attribute("test.source", "docker")
+        span.set_attribute("test.value", "hello-phoenix")
+    return {"status": "trace sent"}
+
+# ---------------------------------------------------------
+# List user sessions
+# ---------------------------------------------------------
+
+@app.get("/sessions/{user_id}")
+async def sessions(user_id: str):
+
+    return JSONResponse(
+        content=list_sessions(user_id)
+    )
+
+# ---------------------------------------------------------
+# Get session history
+# ---------------------------------------------------------
+
+@app.get("/history/{session_id}")
+async def history(session_id: str):
+
+    return JSONResponse(
+        content=get_session_history(session_id)
+    )
 
 # ---------------------------------------------------------
 # Streaming endpoint

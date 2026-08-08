@@ -1,0 +1,40 @@
+# Docker Compose configuration for running the TravelMate AI backend and frontend services locally.
+
+services:
+
+  phoenix:
+    image: arizephoenix/phoenix:latest
+    container_name: travelmate-phoenix
+    ports:
+      - "6006:6006"
+      - "4317:4317"
+    restart: unless-stopped
+    
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: travelmate-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/data:/app/data
+      - ./backend/logs:/app/logs
+    env_file:
+      - ./backend/.env
+    environment:
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://phoenix:4317
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: travelmate-frontend
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
+    environment:
+      API_BASE: http://backend:8000
+    restart: unless-stopped

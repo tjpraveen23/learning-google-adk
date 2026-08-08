@@ -1,10 +1,11 @@
 """
 ==============================================================
 Day 15 - Production Multi-Agent
-Step 12: Streamlit UI
+Step 12: Streamlit UI with Persistent Chat History
 
 Features:
-- Left sidebar with chat history
+- Persistent chat history from backend
+- Left sidebar with session list
 - New session support
 - Streaming agent updates
 - Final recommendation
@@ -13,12 +14,18 @@ Features:
 """
 
 import json
-import uuid
 import requests
 import streamlit as st
 from sseclient import SSEClient
 
-API_URL = "http://127.0.0.1:8000/travel"
+import os
+
+API_BASE = os.getenv(
+    "API_BASE",
+    "http://127.0.0.1:8000"
+)
+API_URL = f"{API_BASE}/travel"
+USER_ID = "praveen"
 
 # ---------------------------------------------------------
 # Page configuration
@@ -31,21 +38,40 @@ st.set_page_config(
 )
 
 # ---------------------------------------------------------
-# Session state initialization
+# Backend APIs
 # ---------------------------------------------------------
 
-if "sessions" not in st.session_state:
-    st.session_state.sessions = {}
+def load_sessions():
+    response = requests.get(
+        f"{API_BASE}/sessions/{USER_ID}"
+    )
+
+    if response.status_code == 200:
+        return response.json()
+
+    return []
+
+
+def load_history(session_id: str):
+    response = requests.get(
+        f"{API_BASE}/history/{session_id}"
+    )
+
+    if response.status_code == 200:
+        return response.json()
+
+    return []
+
+
+# ---------------------------------------------------------
+# Session state
+# ---------------------------------------------------------
 
 if "current_session" not in st.session_state:
-    session_id = str(uuid.uuid4())
+    st.session_state.current_session = None
 
-    st.session_state.current_session = session_id
-
-    st.session_state.sessions[session_id] = {
-        "title": "New Chat",
-        "messages": [],
-    }
+if "messages" not in st.session_state:
+    st.session_state.messages = []
 
 # ---------------------------------------------------------
 # Sidebar
@@ -53,33 +79,29 @@ if "current_session" not in st.session_state:
 
 st.sidebar.title("💬 Chats")
 
-if st.sidebar.button("+ New Session", use_container_width=True):
-
-    session_id = str(uuid.uuid4())
-
-    st.session_state.current_session = session_id
-
-    st.session_state.sessions[session_id] = {
-        "title": "New Chat",
-        "messages": [],
-    }
-
+if st.sidebar.button(
+    "+ New Session",
+    use_container_width=True,
+):
+    st.session_state.current_session = None
+    st.session_state.messages = []
     st.rerun()
 
 st.sidebar.divider()
 
-# Chat history list
+sessions = load_sessions()
 
-for session_id, session in st.session_state.sessions.items():
-
-    title = session["title"]
+for session in sessions:
 
     if st.sidebar.button(
-        title,
-        key=session_id,
+        session["title"],
+        key=session["session_id"],
         use_container_width=True,
     ):
-        st.session_state.current_session = session_id
+        st.session_state.current_session = session["session_id"]
+        st.session_state.messages = load_history(
+            session["session_id"]
+        )
         st.rerun()
 
 # ---------------------------------------------------------
@@ -89,16 +111,12 @@ for session_id, session in st.session_state.sessions.items():
 st.title("✈️ TravelMate AI")
 st.caption("Production Multi-Agent Travel Planner")
 
-current = st.session_state.sessions[
-    st.session_state.current_session
-]
+# Display history
 
-# Display conversation history
-
-for msg in current["messages"]:
+for msg in st.session_state.messages:
 
     with st.chat_message(msg["role"]):
-        st.markdown(msg["text"])
+        st.markdown(msg["content"])
 
 # ---------------------------------------------------------
 # User input
@@ -114,19 +132,12 @@ prompt = st.chat_input(
 
 if prompt:
 
-    # Save user message
-
-    current["messages"].append(
+    st.session_state.messages.append(
         {
             "role": "user",
-            "text": prompt,
+            "content": prompt,
         }
     )
-
-    # Update session title
-
-    if current["title"] == "New Chat":
-        current["title"] = prompt[:40]
 
     with st.chat_message("user"):
         st.markdown(prompt)
@@ -145,7 +156,8 @@ if prompt:
             API_URL,
             json={
                 "prompt": prompt,
-                "user_id": "praveen_tj",
+                "user_id": USER_ID,
+                "session_id": st.session_state.current_session,
             },
             stream=True,
             headers={
@@ -168,12 +180,12 @@ if prompt:
             status = event.get("status")
             message = event.get("message")
 
-            # Weather Agent
-
             if agent == "WeatherAgent":
 
                 if status == "started":
-                    weather_box.info("🌤️ WeatherAgent started...")
+                    weather_box.info(
+                        "🌤️ WeatherAgent started..."
+                    )
 
                 elif status == "completed":
 
@@ -183,12 +195,12 @@ if prompt:
                         f"🌤️ WeatherAgent completed ({duration} sec)\\n\\n{message}"
                     )
 
-            # Hotel Agent
-
             elif agent == "HotelAgent":
 
                 if status == "started":
-                    hotel_box.info("🏨 HotelAgent started...")
+                    hotel_box.info(
+                        "🏨 HotelAgent started..."
+                    )
 
                 elif status == "completed":
 
@@ -198,12 +210,12 @@ if prompt:
                         f"🏨 HotelAgent completed ({duration} sec)\\n\\n{message}"
                     )
 
-            # Budget Agent
-
             elif agent == "BudgetAgent":
 
                 if status == "started":
-                    budget_box.info("💰 BudgetAgent started...")
+                    budget_box.info(
+                        "💰 BudgetAgent started..."
+                    )
 
                 elif status == "completed":
 
@@ -213,19 +225,19 @@ if prompt:
                         f"💰 BudgetAgent completed ({duration} sec)\\n\\n{message}"
                     )
 
-            # Coordinator
-
             elif agent == "TravelCoordinator":
 
                 coordinator_box.info(
                     "🧠 TravelCoordinator preparing final itinerary..."
                 )
 
-            # Final Response
-
             elif agent == "Final":
 
                 final_message = message
+
+                st.session_state.current_session = event.get(
+                    "session_id"
+                )
 
                 final_box.markdown(
                     "## Final travel recommendation"
@@ -241,12 +253,10 @@ if prompt:
                     event.get("performance", {})
                 )
 
-        # Save assistant response
-
-        current["messages"].append(
+        st.session_state.messages.append(
             {
                 "role": "assistant",
-                "text": final_message,
+                "content": final_message,
             }
         )
 

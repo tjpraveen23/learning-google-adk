@@ -1,0 +1,43 @@
+Database: SQL Server
+
+Tables
+
+users
+- user_id
+- user_name
+- group_id
+- license_type
+- status
+
+contents
+- content_id
+- created_by
+- project_id
+- created_date
+- last_modified_date
+- view_count
+
+groups
+- group_id
+- group_name
+
+projects
+- project_id
+- project_name
+
+Relationships
+
+users.group_id = groups.group_id
+contents.created_by = users.user_id
+contents.project_id = projects.project_id
+
+Business rules
+
+- Author licenses create content.
+- Consumer licenses consume content.
+- Content activity is measured using last_modified_date.
+- Content consumption is measured using view_count.
+
+Use SQL Server syntax.
+Generate only SELECT queries.
+Default detailed queries to TOP 20 rows.
