@@ -1,8 +1,8 @@
 # TravelMate AI – Production-Grade Multi-Agent Application
 
-TravelMate AI is a **production-grade multi-agent travel planning application** built using **Google ADK (Agent Development Kit)**. The application demonstrates enterprise AI engineering patterns including **multi-agent orchestration, persistent memory, SQLite caching, streaming responses, structured logging, callbacks, tracing, FastAPI, and Streamlit**.
+TravelMate AI is a **production-grade multi-agent travel planning application** built using **Google ADK (Agent Development Kit)**. The application demonstrates enterprise AI engineering patterns including **multi-agent orchestration, persistent memory, SQLite caching, streaming responses, structured logging, callbacks, Phoenix tracing, Docker, and GitHub Actions CI**.
 
-This project was built as a capstone implementation after a structured 15-day ADK learning journey and is designed to be **deployment-ready with Docker, GitHub Actions, and Harness CI/CD**.
+This project was built as a capstone implementation after a structured ADK learning journey and is designed to showcase **production-ready AI application architecture**.
 
 ## Architecture
 
@@ -50,7 +50,8 @@ Supporting Services
 - SQLite Cache (TTL)
 - Structured Logging
 - ADK Callbacks
-- OpenTelemetry Tracing
+- Phoenix OpenTelemetry Tracing
+- Docker Compose
 ```
 
 ## Features
@@ -64,9 +65,9 @@ Supporting Services
 
 ### Persistent SQLite memory
 
-* Conversation memory stored using **Google ADK DatabaseSessionService**
+* Conversation memory using **Google ADK DatabaseSessionService**
 * Session continuity across application restarts
-* Separate user sessions supported
+* Multiple user sessions
 
 ### SQLite caching
 
@@ -89,68 +90,54 @@ Supporting Services
 * Structured logging with request IDs
 * Agent execution timing
 * Tool execution timing
-* ADK callbacks
-* OpenTelemetry tracing foundation
+* Phoenix tracing
+* OpenTelemetry integration
 
-### Production UI
+### Production-ready deployment
 
-* Chat interface
-* Session history sidebar
-* New session support
-* Performance summary
-* Real-time agent status
+* Dockerized backend and frontend
+* Docker Compose orchestration
+* GitHub Actions CI pipeline
+* Environment-based configuration
+* Health-check validation
 
 ## Project structure
 
 ```text
-15-production-grade/
-
-├── app.py                     # FastAPI application
-├── streamlit_app.py           # Streamlit UI
-├── requirements.txt
-├── .env
-├── Dockerfile
-│
-├── data/
-│   ├── travelmate.db          # ADK session memory
-│   ├── cache.db               # SQLite cache
-│   └── trace.db               # Trace storage
-│
-├── logs/
-│   └── travelmate.log
-│
-├── travel_agent/
-│   ├── __init__.py
-│   ├── config.py
-│   ├── logger.py
-│   ├── database.py
-│   ├── cache.py
-│   ├── tracing.py
-│   ├── callbacks.py
-│   ├── orchestrator.py
-│   ├── coordinator.py
-│   ├── weather_agent.py
-│   ├── hotel_agent.py
-│   ├── budget_agent.py
-│   └── tools.py
-│
-└── testcases/
-    ├── test_config.py
-    ├── test_database.py
-    ├── test_cache.py
-    ├── test_tools.py
-    ├── test_agents.py
-    ├── test_stream.py
-    └── test_fastapi.py
+TravelMateAI/
+└── 15-production-grade/
+    ├── app.py
+    ├── streamlit_app.py
+    ├── docker-compose.yml
+    ├── Dockerfile
+    ├── requirements.txt
+    ├── backend/
+    │   ├── .env.example
+    │   ├── data/
+    │   ├── logs/
+    │   └── travel_agent/
+    │       ├── config.py
+    │       ├── database.py
+    │       ├── cache.py
+    │       ├── tracing.py
+    │       ├── callbacks.py
+    │       ├── orchestrator.py
+    │       ├── coordinator.py
+    │       ├── weather_agent.py
+    │       ├── hotel_agent.py
+    │       ├── budget_agent.py
+    │       └── tools.py
+    ├── frontend/
+    └── testcases/
 ```
 
-## Installation
+## Local installation
 
 ### Clone the repository
 
 ```bash
-git clone https://github.com/your-username/travelmate-ai.git
-cd travelmate-ai
+git clone https://github.com/tjpraveen23/learning-google-adk.git
+cd learning-google-adk/TravelMateAI/15-production-grade
 ```
 
 ### Create a virtual environment
@@ -181,50 +168,72 @@ pip install -r requirements.txt
 
 ## Environment configuration
 
-Create a `.env` file.
+Create `backend/.env`.
 
 ```text
 APP_NAME=travelmate
 ENVIRONMENT=dev
 
-MODEL=groq/llama-3.3-70b-versatile
+MODEL_NAME=groq/llama-3.3-70b-versatile
+GROQ_API_KEY=your_groq_api_key
 
-SESSION_DB=data/travelmate.db
+SESSION_DB=data/sessions.db
 CACHE_DB=data/cache.db
-TRACE_DB=data/trace.db
 
-WEATHER_CACHE_TTL=1800
+TRACING_ENABLED=true
+OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4317
+
+WEATHER_CACHE_TTL=3600
 HOTEL_CACHE_TTL=3600
-BUDGET_CACHE_TTL=86400
-ITINERARY_CACHE_TTL=900
-
-FILE_LOG_ENTRY=yes
+BUDGET_CACHE_TTL=3600
 ```
 
 ## Running the application
 
-### Start FastAPI
+### FastAPI
 
 ```bash
 uvicorn app:app --reload
 ```
 
-API available at
+Backend
 
 ```text
 http://127.0.0.1:8000
 ```
 
-### Start Streamlit
+### Streamlit
 
 ```bash
 python -m streamlit run streamlit_app.py
 ```
 
-UI available at
+Frontend
 
 ```text
 http://localhost:8501
+```
+
+## Running with Docker
+
+Build and start the complete application.
+
+```bash
+docker compose up --build
+```
+
+Services
+
+| Service   | URL                   |
+| --------- | --------------------- |
+| FastAPI   | http://localhost:8000 |
+| Streamlit | http://localhost:8501 |
+| Phoenix   | http://localhost:6006 |
+
+Stop all services.
+
+```bash
+docker compose down
 ```
 
 ## API endpoints
@@ -278,45 +287,13 @@ Final recommendation
 
 Run individual components.
 
-### Configuration
-
 ```bash
 python testcases/test_config.py
-```
-
-### Database
-
-```bash
 python testcases/test_database.py
-```
-
-### Cache
-
-```bash
 python testcases/test_cache.py
-```
-
-### Tools
-
-```bash
 python testcases/test_tools.py
-```
-
-### Individual agents
-
-```bash
 python testcases/test_agents.py
-```
-
-### Streaming orchestrator
-
-```bash
 python testcases/test_stream.py
-```
-
-### FastAPI streaming
-
-```bash
 python testcases/test_fastapi.py
 ```
 
@@ -341,10 +318,10 @@ This significantly reduces latency for repeated travel requests.
 
 ## Logging
 
-Logs are written to
+Logs are written to:
 
 ```text
-logs/travelmate.log
+backend/logs/travelmate.log
 ```
 
 Sample log
@@ -355,9 +332,39 @@ Sample log
 2026-08-02 20:15:37 | INFO | cache | request-id | Cache HIT: weather:chennai
 ```
 
-## Performance tracking
+## Tracing
 
-Each request includes a performance summary.
+Phoenix captures request spans, agent spans, and tool spans.
+
+Open:
+
+```text
+http://localhost:6006
+```
+
+This provides end-to-end execution visibility for the complete agent workflow.
+
+## CI pipeline
+
+The project includes a **GitHub Actions CI pipeline** located at:
+
+```text
+.github/workflows/TravelMateAI-ci.yml
+```
+
+The pipeline automatically:
+
+* Builds Docker images
+* Starts backend and frontend containers
+* Performs health checks
+* Validates the FastAPI endpoint
+* Cleans up containers
+
+This ensures every change is validated automatically.
+
+## Performance summary
+
+Each request includes execution timing.
 
 Example
 
@@ -373,48 +380,34 @@ Example
 
 ## Technology stack
 
-* **Google ADK**
-* **FastAPI**
-* **Streamlit**
-* **SQLite**
-* **OpenTelemetry**
-* **Python 3.14**
-* **Server-Sent Events (SSE)**
-* **Structured Logging**
-* **AsyncIO**
-
-## Production roadmap
-
-Planned production enhancements.
-
-* Docker containerization
+* Google ADK
+* FastAPI
+* Streamlit
+* SQLite
+* Phoenix
+* OpenTelemetry
+* Docker
 * Docker Compose
-* GitHub Actions CI
-* Harness CD
-* Secrets management
-* Health checks
-* Readiness probes
-* Metrics and monitoring
-* Horizontal scaling
-* External cache (Redis)
-* Cloud database support
+* GitHub Actions
+* Python
+* AsyncIO
+* Server-Sent Events (SSE)
 
-## Learning outcomes
-
-This project demonstrates practical implementation of:
+## Production engineering concepts demonstrated
 
 * Multi-agent orchestration
 * Agent communication
 * Streaming AI responses
 * Persistent conversational memory
-* Caching strategies
-* Observability
-* Production logging
-* Tracing
-* Async Python
-* FastAPI APIs
-* Streamlit real-time interfaces
-* Enterprise AI application architecture
+* Cache-aside pattern
+* TTL-based caching
+* Structured logging
+* Distributed tracing
+* Docker containerization
+* CI automation
+* Health checks
+* Environment-based configuration
+* Async Python architecture
 
 ## License
 
